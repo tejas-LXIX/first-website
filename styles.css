@@ -1,0 +1,155 @@
+div {
+}
+body {
+  margin: 0px;
+  text-align: center; /*only works for inline-block elements(like img) or full width block elements(that occupy the full width of the site,EG: default h1,p tags). Here,this will not center the h1 tags because their width has been set to 10%,not full width.*/
+  /*font-family: "Helvetica Neue",verdana, sans-serif;   tells the browser to render all the body text in Helvetica Neue. If the PC does not support it,then it goes to verdana. Ye bhi nahi hai,toh it will default to sans-serif font family whose default is Arial.*/
+  font-family: "Merriweather", serif;
+  color: #40514e;
+}
+h1 {
+  /*
+    margin-block-start:0px;     is the same as margin-top
+    margin-block-end:0px;
+    margin-inline-start:0px;    is the same as margin-left
+    margin-inline-end:0px;  */
+  width: 24%; /*This will not be centered by text-align:center;*/
+  margin: 100px auto 0 auto; /*To center elements that dont obey the above conditions. "auto" centers the element from the direction where its written. Here, it corresponds to margin: top right bottom left.*/
+  /*check MDN docs for margin to see how stuff is written*/
+  font-family: "Sacramento", cursive;
+  font-size: 4.375rem; /*can be written 437.5% too.equal to 70px. 100%=16px=1em. This percentage/em makes the text dynamic,so that if the user changes the font size in chrome,this text would change accordingly.
+    r in rem is just so that this font size does not get added to parent font size(this happens if body and h1 both have font sizes in em). rem se parent ka body size add nahi hoga.*/
+  color: #66bfbf;
+}
+h2 {
+  font-family: "Merriweather", sans-serif;
+  color: #66bfbf;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #11999e;
+  font-weight: bold;
+}
+hr {
+  border: dotted #11999e 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+a {
+  color: #11999e;
+  margin: 10px 5px;
+  text-decoration: none;
+}
+a:hover {
+  color: #eaf6f6;
+}
+
+.top-container {
+  background-color: #eaf6f6;
+  position: relative; /*Very important to position the clouds properly*/
+  padding-top: 100px;
+  height: 630px;
+}
+.middle-container {
+  margin: 50px 0;
+}
+.bottom-container {
+  background-color: #66bfbf;
+  padding: 30px 0 20px;
+}
+.firstpara {
+  color: #66bfbf;
+  font-weight: normal;
+}
+.web {
+  text-decoration: underline;
+}
+.bottom-cloud {
+  position: absolute; /*in order to position it relative to something,one of its parents has to have its position set as relative. Otherwise it will position itself relative to the body. So we make the top container's position relative.*/
+  left: 350px;
+  bottom: 300px;
+}
+.top-cloud {
+  position: absolute;
+  right: 350px;
+  top: 50px;
+}
+.mountain {
+  bottom: 0px;
+}
+.skill-row {
+  width: 50%;
+  margin: 50px auto 130px auto;
+  text-align: left;
+}
+.intro-para {
+  width: 30%;
+  margin: 0 auto 0 auto;
+  font-weight: bold;
+  line-height: 2;
+}
+.skill-para {
+  font-weight: bold;
+  line-height: 2;
+}
+.football-img {
+  width: 25%;
+  float: left; /*The image will float to the left of the text. To have both the image and the text on the same line,beside each other. with the text wrapping around the image. Agar sirf title float karwana hai,then
+    index.html mein go to the p tag,make a new class for it. us class mein set, clear:left. THIS will clear its left side,preventing it from wrapping anything on the left. clear is like ANTI-float TRY IT
+    USE float only for wrapping text. */
+  margin-right: 30px; /* to have some separation between the image and the text.*/
+}
+.webdev-img {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+.contact-message {
+  width: 30%;
+  margin: 0 auto 30px auto;
+  font-weight: bold;
+}
+.copyright {
+  color:#eaf6f6;
+  font-size:0.75rem;
+  padding:15px 0;
+}
+
+.BUTTON_MIP {
+  background: #045762;
+  background-image: -webkit-linear-gradient(top, #045762, #010710);
+  background-image: -moz-linear-gradient(top, #045762, #010710);
+  background-image: -ms-linear-gradient(top, #045762, #010710);
+  background-image: -o-linear-gradient(top, #045762, #010710);
+  background-image: -webkit-gradient(to bottom, #045762, #010710);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  width: 200px;
+  font-size: 20px;
+  font-weight: 300;
+  border: solid #337fed 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.BUTTON_MIP:hover {
+  border: solid #337fed 1px;
+  background: #070f04;
+  background-image: -webkit-linear-gradient(top, #070f04, #5d636d);
+  background-image: -moz-linear-gradient(top, #070f04, #5d636d);
+  background-image: -ms-linear-gradient(top, #070f04, #5d636d);
+  background-image: -o-linear-gradient(top, #070f04, #5d636d);
+  background-image: -webkit-gradient(to bottom, #070f04, #5d636d);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
